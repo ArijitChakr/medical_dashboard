@@ -1,4 +1,4 @@
-type dataType = {
+export type dataType = {
   age: number;
   gender: string;
   name: string;
@@ -38,7 +38,7 @@ type dataType = {
   }[];
 };
 
-type HistoryProps = {
+export type HistoryProps = {
   data: {
     diagnosis_history: {
       blood_pressure: {

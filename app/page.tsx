@@ -4,46 +4,7 @@ import PatientList from "./components/PatientList";
 import PatientProfile from "./components/PatientProfile";
 import DiagnistList from "./components/DiagnistList";
 import LabResults from "./components/LabResults";
-
-type dataType = {
-  age: number;
-  gender: string;
-  name: string;
-  profile_picture: string;
-  diagnosis_history: {
-    blood_pressure: {
-      systolic: {
-        value: number;
-        levels: string;
-      };
-      diastolic: {
-        value: number;
-        levels: string;
-      };
-    };
-    respiratory_rate: {
-      value: number;
-      levels: string;
-    };
-    heart_rate: {
-      value: number;
-      levels: string;
-    };
-    temperature: {
-      value: number;
-      levels: string;
-    };
-
-    month: string;
-    year: string;
-  }[];
-  lab_results: string[];
-  diagnostic_list: {
-    name: string;
-    description: string;
-    status: string;
-  }[];
-};
+import { dataType } from "./types";
 
 export default async function Home() {
   const response = await axios.get(

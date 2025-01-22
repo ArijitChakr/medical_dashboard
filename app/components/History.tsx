@@ -1,37 +1,6 @@
 import BloodPressureChart from "./LineChart";
 import HealthCheckCard from "./HealthCheckCard";
-
-type HistoryProps = {
-  data: {
-    diagnosis_history: {
-      blood_pressure: {
-        systolic: {
-          value: number;
-          levels: string;
-        };
-        diastolic: {
-          value: number;
-          levels: string;
-        };
-      };
-      respiratory_rate: {
-        value: number;
-        levels: string;
-      };
-      heart_rate: {
-        value: number;
-        levels: string;
-      };
-      temperature: {
-        value: number;
-        levels: string;
-      };
-
-      month: string;
-      year: string;
-    }[];
-  };
-};
+import { HistoryProps } from "../types";
 
 export default async function History({ data }: HistoryProps) {
   return (
